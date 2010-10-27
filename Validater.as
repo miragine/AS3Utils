@@ -30,8 +30,6 @@ package {
 			var lang:String = Capabilities.language == "zh-CN" ? AtoString(a3) : AtoString(a2);
 			var langCheck:RegExp = new RegExp(AtoString(a0), "i");
 			
-			//trace(url)
-			//trace(domainCheck)
 			if (!langCheck.test(url)){
 				var tt:TextField = new TextField();
 				tt.defaultTextFormat = new TextFormat("Verdana", 12, 0xffffff, true, null, null, null, null, "center", null, null, null, 8);;
