@@ -89,5 +89,16 @@ package{
 			b = (b.length > 1) ? b : "0" + b;
 			return "0x" + r.toUpperCase() + g.toUpperCase() + b.toUpperCase();
 		}
+		
+		public static function formatNum(num:uint):String {
+			var numStr:String  = num.toString();
+			var len:int = numStr.length / 3;
+			var str:int = numStr.length % 3;
+			
+			for(var i:int; i<len;i++){
+				numStr = numStr.substr(0,str+(4*i)) +","+ numStr.substr(str+(4*i))
+			}
+			return numStr;
+		}
 	}
 }
